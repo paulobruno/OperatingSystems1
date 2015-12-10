@@ -8,10 +8,13 @@ public class Factory {
 	public static final String PRIORITY = "Priority";
 	public static final String PRIORITY_P = "PriorityP";
 
-	public ScheduleAlgorithm createAlgorithm(String algorithmName) throws IllegalArgumentException {
+	public ScheduleAlgorithm createAlgorithm(String[] args) throws IllegalArgumentException {
+		
+		String algorithmName = args[2];
 
 		if (algorithmName.equals(RR)) {
-			return new RoundRobin();
+			int timeQuantum = Integer.parseInt(args[3]);
+			return new RoundRobin(timeQuantum);
 		}
 		
 		else if (algorithmName.equals(FCFS)) {

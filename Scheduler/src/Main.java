@@ -21,7 +21,7 @@ public class Main {
 		// TODO: argumentos adicionais
 		ScheduleAlgorithm algorithm = null;
 		try {
-			algorithm = factory.createAlgorithm(args[2]);
+			algorithm = factory.createAlgorithm(args);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			System.out.println("Algoritmo '" + args[2] + "' invalido. Programa abortado.");
