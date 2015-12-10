@@ -8,7 +8,7 @@ public class Factory {
 	public static final String PRIORITY = "Priority";
 	public static final String PRIORITY_P = "PriorityP";
 
-	public ScheduleAlgorithm createAlgorithm(String algorithmName) {
+	public ScheduleAlgorithm createAlgorithm(String algorithmName) throws IllegalArgumentException {
 
 		if (algorithmName.equals(RR)) {
 			return new RoundRobin();

@@ -5,7 +5,15 @@ public class Task {
 	private int burstTime;
 	private int arrivalTime;
 	private int priority;
-	
+		
+	public Task(long id, int burstTime, int arrivalTime, int priority) {
+		super();
+		this.id = id;
+		this.burstTime = burstTime;
+		this.arrivalTime = arrivalTime;
+		this.priority = priority;
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -22,7 +30,7 @@ public class Task {
 		return priority;
 	}
 	
-	public void execute() {
-		
+	public void executeStep() {
+		--burstTime;
 	}
 }
