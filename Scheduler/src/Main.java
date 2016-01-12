@@ -1,11 +1,13 @@
 import java.io.IOException;
 
-
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO: verificar args[n] no terminal
-		// TODO: verificar entrada valida
+		
+		if (args.length < 3) {
+			System.out.println("Programa requer pelo menos 3 parametros: <nome> <arquivo_entrada> <metodo>");
+			throw new IllegalArgumentException();
+		}
 		
 		Tasks taskList = null;
 		try {
@@ -18,7 +20,6 @@ public class Main {
 
 		Factory factory = new Factory();
 		
-		// TODO: argumentos adicionais
 		ScheduleAlgorithm algorithm = null;
 		try {
 			algorithm = factory.createAlgorithm(args);

@@ -1,9 +1,6 @@
 import java.util.Collections;
 import java.util.Comparator;
 
-
-
-
 public class Sjf extends ScheduleAlgorithm {
 
 	@Override

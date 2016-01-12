@@ -13,8 +13,14 @@ public class Factory {
 		String algorithmName = args[2];
 
 		if (algorithmName.equals(RR)) {
-			int timeQuantum = Integer.parseInt(args[3]);
-			return new RoundRobin(timeQuantum);
+			try {
+				int timeQuantum = Integer.parseInt(args[3]);				
+				return new RoundRobin(timeQuantum);
+			} catch (ArrayIndexOutOfBoundsException e) { 
+				e.printStackTrace();
+				System.out.println("Algoritmo RoundRobin necessita de parametro adicional <timeQuantum>. Programa abortado.");
+				System.exit(1);
+			}
 		}
 		
 		else if (algorithmName.equals(FCFS)) {

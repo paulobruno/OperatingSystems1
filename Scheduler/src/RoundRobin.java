@@ -1,6 +1,4 @@
 
-
-
 public class RoundRobin extends ScheduleAlgorithm {
 
 	private int timeQuantum;
@@ -30,5 +28,4 @@ public class RoundRobin extends ScheduleAlgorithm {
 			currentTaskTime = 1;
 		}
 	}
-
 }

@@ -4,7 +4,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class Tasks {
 
 	private List<Task> schedule;

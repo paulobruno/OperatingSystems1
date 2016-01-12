@@ -1,7 +1,6 @@
 import java.util.LinkedList;
 import java.util.List;
 
-
 public abstract class ScheduleAlgorithm {
 
 	protected List<Task> processQueue;
@@ -42,7 +41,6 @@ public abstract class ScheduleAlgorithm {
 	}
 	
 	public void addTasksToReady() {
-		// TODO verificar o conteudo das filas
 		int i = 0;
 		while (i < processQueue.size()) {
 			if (processQueue.get(i).getArrivalTime() <= cpuCounter) {
@@ -62,7 +60,6 @@ public abstract class ScheduleAlgorithm {
 			System.out.println(cpuCounter + ": executing task " + currentTask.getId() + "... (remaining burst time: " + currentTask.getBurstTime() + ")");
 			
 			// verifies if task has finished
-			// TODO verificar o conteudo das filas
 			if (0 == currentTask.getBurstTime()) {
 				finishedQueue.add(currentTask);
 				readyQueue.remove(currentTask);

@@ -14,7 +14,7 @@ public class AlgorithmStatistics {
 	private int numberProcessEveryExecuteQueue;
 
 	public void generateFile() {
-		// TODO: gerar o aqruivo de estatisticas.txt
+		// TODO: gerar o arquivo de estatisticas.txt
 	}
 	
 	public String getHeader() {
@@ -97,5 +97,4 @@ public class AlgorithmStatistics {
 			int numberProcessEveryExecuteQueue) {
 		this.numberProcessEveryExecuteQueue = numberProcessEveryExecuteQueue;
 	}
-
 }

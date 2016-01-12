@@ -1,7 +1,6 @@
 import java.util.Collections;
 import java.util.Comparator;
 
-
 public class PriorityPreemptive extends ScheduleAlgorithm {
 
 	@Override

@@ -1,6 +1,4 @@
 
-
-
 public class Fcfs extends ScheduleAlgorithm {
 	
 	@Override
