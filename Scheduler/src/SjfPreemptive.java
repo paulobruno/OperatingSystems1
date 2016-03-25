@@ -14,12 +14,20 @@ public class SjfPreemptive extends ScheduleAlgorithm {
 				}
 			});
 			
+            ++contextSwitch;
+            
 			// DEBUG: debug do conteudo da fila de ready
 			/*for (int j = 0; j < readyQueue.size(); ++j) {
 				System.out.println("elemento[" + j + "]: " + readyQueue.get(j).getId() + "  p: " + readyQueue.get(j).getPriority() + "  b: " + readyQueue.get(j).getBurstTime());
 			}*/
 			
 			currentTask = readyQueue.get(0);
+			responseTimeSum += cpuCounter - currentTask.getArrivalTime();
 		}
 	}	
+	
+	@Override
+	public String getAlgorithmHeader() {
+	    return "Preemptive SJF";
+	}
 }

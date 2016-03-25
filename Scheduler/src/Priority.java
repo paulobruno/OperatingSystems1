@@ -21,6 +21,12 @@ public class Priority extends ScheduleAlgorithm {
 			}*/
 			
 			currentTask = readyQueue.get(0);
+			responseTimeSum += cpuCounter - currentTask.getArrivalTime();
 		}
 	}	
+	
+	@Override
+	public String getAlgorithmHeader() {
+	    return "Priority";
+	}
 }
